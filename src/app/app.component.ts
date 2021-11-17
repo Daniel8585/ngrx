@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngRx';
+ counter = 0;
+
+get cannotDecrease():boolean{
+  return this.counter <= 0
+}
+
+ imcrease(): void{
+   this.counter++;
+ }
+
+ decrease(): void{
+   this.counter--;
+ }
+
+ clear(): void{
+   this.counter = 0;
+ }
+
+
 }
